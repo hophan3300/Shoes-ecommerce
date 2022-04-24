@@ -6,11 +6,14 @@ import productRoute from "./Routes/ProductRoutes.js";
 import { errorHandler, notFound } from "./Middleware/Errors.js";
 import userRouter from "./Routes/UserRoutes.js";
 import orderRouter from "./Routes/orderRoutes.js";
+import cors from 'cors'
+
 
 dotenv.config();
 connectDatabase();
 const app = express();
-app.use(express.json());
+app.use(express.json())
+app.use(cors())
 
 // API
 app.get("/", (req, res) => {
@@ -27,6 +30,7 @@ app.get("/api/config/paypal", (req, res) => {
 // ERROR HANDLER
 app.use(notFound);
 app.use(errorHandler);
+
 
 
 app.listen(process.env.PORT || 3000, console.log(`server run`));

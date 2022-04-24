@@ -17,13 +17,13 @@ const Product = (props) => {
     <>
       <div className="col-md-6 col-sm-6 col-lg-3 mb-5">
         <div className="card card-product-grid shadow-sm">
-          <Link to="#" className="img-wrap">
+          <div className="img-wrap">
             <img src={product.image} alt="Product" />
-          </Link>
+          </div>
           <div className="info-wrap">
-            <Link to="#" className="title text-truncate">
+            <div className="title text-truncate">
               {product.name}
-            </Link>
+            </div>
             <div className="price mb-2">${product.price}</div>
             <div className="row">
               <Link
