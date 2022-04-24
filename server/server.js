@@ -13,6 +13,9 @@ const app = express();
 app.use(express.json());
 
 // API
+app.get("/", (req, res) => {
+  res.send("server is run")
+})
 app.use("/api/import", ImportData);
 app.use("/api/products", productRoute);
 app.use("/api/users", userRouter);
@@ -25,6 +28,5 @@ app.get("/api/config/paypal", (req, res) => {
 app.use(notFound);
 app.use(errorHandler);
 
-const PORT = 5000;
 
-app.listen(PORT, console.log(`server run in port 5000`));
+app.listen(process.env.PORT || 3000, console.log(`server run`));
