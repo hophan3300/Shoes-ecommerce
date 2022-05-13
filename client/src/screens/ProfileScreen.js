@@ -32,7 +32,7 @@ const ProfileScreen = () => {
               <div className="author-card-cover"></div>
               <div className="author-card-profile row">
                 <div className="author-card-avatar col-md-5">
-                  <img src="./images/user.png" alt="userprofileimage" />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/User_font_awesome.svg/2048px-User_font_awesome.svg.png" alt="userprofileimage" style={{backgroundColor:"#fff"}}/>
                 </div>
                 <div className="author-card-details col-md-7">
                   <h5 className="author-card-name mb-2">

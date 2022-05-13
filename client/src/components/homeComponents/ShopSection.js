@@ -32,6 +32,12 @@ const ShopSection = (props) => {
                   <Message variant="alert-danger">{error}</Message>
                 ) : (
                   <>
+                    <h2 style={{
+                      textAlign:"center",
+                      fontSize: 40,
+                      fontWeight: 600,
+                      marginBottom: 40
+                    }}>New Arrivals</h2>
                     {products.map((product) => (
                       <div
                         className="shop col-lg-4 col-md-6 col-sm-6"

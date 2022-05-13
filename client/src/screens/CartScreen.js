@@ -34,7 +34,9 @@ const CartScreen = ({ match, location, history }) => {
       {/* Cart */}
       <div className="container">
         {cartItems.length === 0 ? (
-          <div className=" alert alert-info text-center mt-3">
+          <div className=" alert alert-info text-center mt-3"
+          
+          >
             Your cart is empty
             <Link
               className="btn btn-success mx-5 px-5 py-3"
@@ -48,12 +50,6 @@ const CartScreen = ({ match, location, history }) => {
           </div>
         ) : (
           <>
-            <div className=" alert alert-info text-center mt-3">
-              Total Cart Products
-              <Link className="text-success mx-2" to="/cart">
-                ({cartItems.length})
-              </Link>
-            </div>
             {/* cartiterm */}
             {cartItems.map((item) => (
               <div className="cart-iterm row">
