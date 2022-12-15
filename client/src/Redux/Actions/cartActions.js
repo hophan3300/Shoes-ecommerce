@@ -8,7 +8,9 @@ import {
 
 // ADD TO CART
 export const addToCart = (id, qty) => async (dispatch, getState) => {
-  const { data } = await axios.get(`https://api-shoes-ecommerce.herokuapp.com/api/products/${id}`);
+  const { data } = await axios.get(
+    `https://shoes-ecommerce-api.onrender.com//api/products/${id}`
+  );
 
   dispatch({
     type: CART_ADD_ITEM,

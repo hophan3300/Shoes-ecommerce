@@ -19,7 +19,7 @@ export const listProduct =
     try {
       dispatch({ type: PRODUCT_LIST_REQUEST });
       const { data } = await axios.get(
-        `https://api-shoes-ecommerce.herokuapp.com/api/products?keyword=${keyword}`
+        `https://shoes-ecommerce-api.onrender.com//api/products?keyword=${keyword}`
       );
       dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
     } catch (error) {
@@ -37,7 +37,9 @@ export const listProduct =
 export const listProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
-    const { data } = await axios.get(`https://api-shoes-ecommerce.herokuapp.com/api/products/${id}`);
+    const { data } = await axios.get(
+      `https://shoes-ecommerce-api.onrender.com//api/products/${id}`
+    );
     dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
@@ -67,7 +69,11 @@ export const createProductReview =
         },
       };
 
-      await axios.post(`https://api-shoes-ecommerce.herokuapp.com/api/products/${productId}/review`, review, config);
+      await axios.post(
+        `https://shoes-ecommerce-api.onrender.com//api/products/${productId}/review`,
+        review,
+        config
+      );
       dispatch({ type: PRODUCT_CREATE_REVIEW_SUCCESS });
     } catch (error) {
       const message =

@@ -29,7 +29,7 @@ export const login = (email, password) => async (dispatch) => {
     };
 
     const { data } = await axios.post(
-      `https://api-shoes-ecommerce.herokuapp.com/api/users/login`,
+      `https://shoes-ecommerce-api.onrender.com//api/users/login`,
       { email, password },
       config
     );
@@ -81,7 +81,10 @@ export const listUser = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`https://api-shoes-ecommerce.herokuapp.com/api/users`, config);
+    const { data } = await axios.get(
+      `https://shoes-ecommerce-api.onrender.com//api/users`,
+      config
+    );
 
     dispatch({ type: USER_LIST_SUCCESS, payload: data });
   } catch (error) {
