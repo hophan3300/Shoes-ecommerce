@@ -36,4 +36,3 @@ app.use(errorHandler);
 app.listen(process.env.PORT || 3000, console.log(`server run`));
 
 
-module.exports = app;
